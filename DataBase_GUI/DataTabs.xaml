@@ -1,0 +1,63 @@
+﻿<UserControl x:Class="DataBase_GUI.DataTabs"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:DataBase_GUI"
+             mc:Ignorable="d" Height="499" Width="879">
+    <Grid>
+        <TabControl 
+            VerticalAlignment="Top"
+            HorizontalAlignment="Left" 
+            Height="490" Width="860"
+            MinHeight="490" MinWidth ="860"
+            Margin="10,10,0,0">
+            <TabItem x:Name="villageTab">
+                <TabItem.Header>
+                    <StackPanel Orientation="Horizontal">
+                        <TextBlock Margin="116,10">
+                            <Run Text="Посёлки"/>
+                        </TextBlock>
+                    </StackPanel>
+                </TabItem.Header>
+                <Grid>
+                    <local:VillageTable x:Name="villTable" 
+                        HorizontalAlignment="Left" VerticalAlignment="Top"  
+                        Height="421" Width="833"
+                        Margin="10,10,0,0"/>
+                </Grid>
+            </TabItem>
+            <TabItem>
+                <TabItem.Header>
+                    <StackPanel Orientation="Horizontal">
+                        <TextBlock Margin="100,10">
+                            <Run Text="Дома"/>
+                        </TextBlock>
+                    </StackPanel>
+                </TabItem.Header>
+                <Grid>
+                    <local:HouseTable x:Name="houseTable" 
+                        HorizontalAlignment="Left" VerticalAlignment="Top" 
+                        Height="421" Width="833"
+                        Margin="10,10,0,0"/>
+                </Grid>
+            </TabItem>
+            <TabItem x:Name="dveloperGrid">
+                <TabItem.Header>
+                    <StackPanel Orientation="Horizontal">
+                        <TextBlock Margin="121,10">
+                            <Run Text="Девелоперы"/>
+                        </TextBlock>
+                    </StackPanel>
+                </TabItem.Header>
+                <Grid>
+                    <local:DeveloperTable x:Name="devTable" 
+                        HorizontalAlignment="Left" VerticalAlignment="Top"
+                        Height="421" Width="833"
+                        Margin="10,10,0,0"/>
+                </Grid>
+            </TabItem>
+        </TabControl>
+
+    </Grid>
+</UserControl>

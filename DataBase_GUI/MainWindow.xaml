@@ -1,0 +1,39 @@
+﻿<Window x:Class="DataBase_GUI.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:DataBase_GUI"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="580" Width="1065" MinHeight="580" MinWidth ="1065" Background="White">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="59*"/>
+            <ColumnDefinition Width="330*"/>
+        </Grid.ColumnDefinitions>
+        <Button x:Name="MainPage_Button" 
+                Content="Главная страница" 
+                HorizontalAlignment="Left" 
+                Margin="25,37,0,0"
+                VerticalAlignment="Top"
+                Width="131" Height="41"
+                Click="MainPage_Button_Click"/>
+        <Button x:Name="outBase_Button" 
+                Content="База данных" 
+                HorizontalAlignment="Left" 
+                Margin="25,97,0,0" 
+                VerticalAlignment="Top" 
+                Width="131" Height="41" 
+                Click="OutBase_Button_Click"/>
+        <Button x:Name="fileSelection_Button"
+                Content="Выбор файла" 
+                HorizontalAlignment="Left"
+                Margin="25,158,0,0"
+                VerticalAlignment="Top"
+                Width="131" Height="41"
+                Click="FileSelection_Button_Click"/>
+        <ContentPresenter 
+            x:Name="Main_Presenter"
+            Margin="10.333,10,10.667,9.333" Grid.Column="1" />
+    </Grid>
+</Window>
